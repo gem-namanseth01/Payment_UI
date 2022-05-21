@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TransactionRecordPageComponent } from './transaction-record-page/transaction-record-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TransactionRecordPageComponent
   ],
   imports: [
     BrowserModule,
