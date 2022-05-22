@@ -7,21 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TransactionRecordPageComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
   arr = new Set<string>();
-  presentBefore(unit : any) {
+  presentBefore(unit:any) {
     if (this.arr.has(unit)) {
-      return true;
-    } else {
-      this.arr.add(unit);
+      console.log('if called');
       return false;
+    } else {
+      console.log('else called')
+      this.arr.add(unit);
+      console.log(this.arr);
+      return true;
     }
+    
   }
-
+  
   transactions = [{
     id: 1,
     isRequested:false,
@@ -60,5 +59,12 @@ export class TransactionRecordPageComponent implements OnInit {
   }];
 
   
+
+  
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
   
 }
